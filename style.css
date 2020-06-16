@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: left;
 }
-#rectangle{
+.div{
     width:100px;
     height:20px;
     background:gray;

@@ -147,7 +147,7 @@ const kata12Answer = document.createElement('div')
 mainElement.append(kata12heading)
 mainElement.append(kata12Answer)
 kata12heading.append('Kata 12')
-for (let index = 0; index < sampleArray.length; index ++ ){
+  for (let index = 0; index < sampleArray.length; index ++ ){
     if ((sampleArray[index] % 2) != 1){
         kata12Answer.append(sampleArray[index] + ', ')
     }
@@ -159,7 +159,7 @@ const kata13Answer = document.createElement('div')
 mainElement.append(kata13heading)
 mainElement.append(kata13Answer)
 kata13heading.append('Kata 13')
-for (let index = 0; index < sampleArray.length; index ++ ){
+  for (let index = 0; index < sampleArray.length; index ++ ){
     if ((sampleArray[index] % 2) != 0){
         kata13Answer.append(sampleArray[index] + ', ')
     }
@@ -172,12 +172,11 @@ const kata14Answer = document.createElement('div')
 mainElement.append(kata14heading)
 mainElement.append(kata14Answer)
 kata14heading.append('Kata 14')
-// Math.sqrt(x)
-    // function squareIt(number)
-    // return number * number
-    // kata14Answer.append(sampleArray + ', ')  
-
-
+  let squared = 0
+  for (let index = 0; index < sampleArray.length; index ++ ){
+    squared = sampleArray[index] * sampleArray[index]
+      kata14Answer.append(squared + ', ')
+} 
 
 // Display the sum of all the numbers from 1 to 20.
 const kata15heading = document.createElement('h1')
@@ -185,10 +184,11 @@ const kata15Answer = document.createElement('div')
 mainElement.append(kata15heading)
 mainElement.append(kata15Answer)
 kata15heading.append('Kata 15')
-function sumAll(arr){
-
+  let sum = 0
+  for (let index = 0; index <= 20; index += 1){ 
+    sum += index
 }
-
+kata15Answer.append(sum)
 
 // Display the sum of all the elements in sampleArray.
 const kata16heading = document.createElement('h1')
@@ -196,16 +196,24 @@ const kata16Answer = document.createElement('div')
 mainElement.append(kata16heading)
 mainElement.append(kata16Answer)
 kata16heading.append('Kata 16')
-  function sumAll(arr){
-    const min = Math.min(sampleArray)
-    const max = Math.max(sampleArray)
-    let sum = 0
-    for (let i = min; i <= max; i++){
-      sum += i
-    }
-    kata17Answer.append(sum)
-}
 
+  let sum = 0
+  for (let index = 0; index <= sampleArray.length; index += 1){ 
+    sum += sampleArray[index]
+}
+  kata16Answer.append(sum)
+
+
+
+
+
+
+
+
+
+
+
+  
 
 // Display the smallest element in sampleArray.
 const kata17heading = document.createElement('h1')
@@ -213,13 +221,8 @@ const kata17Answer = document.createElement('div')
 mainElement.append(kata17heading)
 mainElement.append(kata17Answer)
 kata17heading.append('Kata 17')
-
-sampleArray.min = function(sampleArray){
-  return Math.min.apply(math, array);
-};
-var minimum = sampleArray.min
-
-
+let smallest = sampleArray[0]
+kata17Answer.append(Math.min(...sampleArray))
 
 
 // Display the largest element in sampleArray.
@@ -228,6 +231,9 @@ const kata18Answer = document.createElement('div')
 mainElement.append(kata18heading)
 mainElement.append(kata18Answer)
 kata18heading.append('Kata 18')
+
+let largest = sampleArray[0]
+kata18Answer.append(Math.max(...sampleArray))
 
 // Display 20 solid gray rectangles, each 20px high and 100px wide.
 
