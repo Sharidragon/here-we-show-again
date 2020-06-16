@@ -185,10 +185,9 @@ const kata15Answer = document.createElement('div')
 mainElement.append(kata15heading)
 mainElement.append(kata15Answer)
 kata15heading.append('Kata 15')
-// function sum(input){
-//     for (var i = 0; i <= 20; i += 1)
+function sumAll(arr){
 
-
+}
 
 
 // Display the sum of all the elements in sampleArray.
@@ -197,6 +196,16 @@ const kata16Answer = document.createElement('div')
 mainElement.append(kata16heading)
 mainElement.append(kata16Answer)
 kata16heading.append('Kata 16')
+  function sumAll(arr){
+    const min = Math.min(sampleArray)
+    const max = Math.max(sampleArray)
+    let sum = 0
+    for (let i = min; i <= max; i++){
+      sum += i
+    }
+    kata17Answer.append(sum)
+}
+
 
 // Display the smallest element in sampleArray.
 const kata17heading = document.createElement('h1')
@@ -204,6 +213,14 @@ const kata17Answer = document.createElement('div')
 mainElement.append(kata17heading)
 mainElement.append(kata17Answer)
 kata17heading.append('Kata 17')
+
+sampleArray.min = function(sampleArray){
+  return Math.min.apply(math, array);
+};
+var minimum = sampleArray.min
+
+
+
 
 // Display the largest element in sampleArray.
 const kata18heading = document.createElement('h1')
@@ -213,37 +230,15 @@ mainElement.append(kata18Answer)
 kata18heading.append('Kata 18')
 
 // Display 20 solid gray rectangles, each 20px high and 100px wide.
-const kata19heading = document.createElement('h1')
-const kata19Answer = document.createElement('div')
-mainElement.append(kata19heading)
-mainElement.append(kata19Answer)
-kata19heading.append('Kata 19')
+
 
 // Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).
-const kata20heading = document.createElement('h1')
-const kata20Answer = document.createElement('div')
-mainElement.append(kata20heading)
-mainElement.append(kata20Answer)
-kata20heading.append('Kata 20')
+
 
 // Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.
-const kata21heading = document.createElement('h1')
-const kata21Answer = document.createElement('div')
-mainElement.append(kata21heading)
-mainElement.append(kata21Answer)
-kata21heading.append('Kata 21')
+
 
 // As in #21, but alternate colors so that every other rectangle is red.
-const kata22heading = document.createElement('h1')
-const kata22Answer = document.createElement('div')
-mainElement.append(kata22heading)
-mainElement.append(kata22Answer)
-kata22heading.append('Kata 22')
+
 
 // As in #21, but color the rectangles with even widths red.
-const kata23heading = document.createElement('h1')
-const kata23Answer = document.createElement('div')
-mainElement.append(kata23heading)
-mainElement.append(kata23Answer)
-kata23heading.append('Kata 23')
-

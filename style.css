@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: left;
+}
+#rectangle{
+    width:100px;
+    height:20px;
+    background:gray;
+}
